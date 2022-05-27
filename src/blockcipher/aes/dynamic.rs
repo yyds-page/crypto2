@@ -32,7 +32,7 @@ macro_rules! impl_dynamic_dispatch {
                 }
 
                 #[cfg(target_arch = "aarch64")]
-                if std::is_aarch64_feature_detected!("aes") {
+                if std::arch::is_aarch64_feature_detected!("aes") {
                     return $name::Platform(platform::$name::new(key));
                 }
 

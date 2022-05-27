@@ -18,7 +18,7 @@ impl Polyval {
         }
 
         #[cfg(target_arch = "aarch64")]
-        if std::is_aarch64_feature_detected!("pmull") {
+        if std::arch::is_aarch64_feature_detected!("pmull") {
             return Polyval::Platform(platform::Polyval::new(k));
         }
 

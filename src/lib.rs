@@ -1,5 +1,5 @@
 #![cfg_attr(test, feature(test))]
-#![cfg_attr(target_arch = "aarch64", feature(stdsimd, aarch64_target_feature))]
+#![cfg_attr(target_arch = "aarch64", feature(stdsimd))]
 #![allow(unused_macros, unused_assignments)]
 
 #[cfg(test)]
